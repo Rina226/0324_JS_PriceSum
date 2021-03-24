@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            font-size: 20px;
+        }
+
+        h1 {
+            font-size: 34px;
+        }
+
+        div#saleInfo {
+            width: 500px;
+            border: 1px solid #000;
+        }
+
+        ul {
+            padding-left: 20px;
+            list-style: none;
+        }
+
+        ul>li {
+            line-height: 40px;
+        }
+
+        span {
+            /*border: 1px solid #000;*/
+            display: inline-block
+        }
+
+        span:first-child {
+            width: 160px;
+        }
+
+        span#priceSum {
+            width: 120px;
+            text-align: right;
+            color: #f30;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+    </style>
+    <script src="script/jquery-3.6.0.min.js"></script>
+    <script src="script/script.js"></script>
+</head>
+
+<body>
+
+    <h1>총 상품금액 계산</h1>
+
+    <div id="saleInfo">
+        <ul>
+            <li>
+                <span>판매가격</span>
+                <span>16,000원</span>
+            </li>
+            <li>
+                <span>분쇄도 선택</span>
+                <span>
+                    <select id="grinding">
+                        <option>--옵션 선택--</option>
+                        <option value="0">원두상태(홀빈) (+0원)</option>
+                        <option value="2000">더치커피용분쇄 (+2000원)</option>
+                        <option value="3000">드립커피용분쇄 (+3000원)</option>
+                        <!--옵션에 밸류속성 기재하지 않으면 그냥 내용이 밸류값으로 자동지정됨. 따라서 옵션선택에는 밸류값을 적으면 안 됨. 나머지에는 값에 따라 적기-->
+                    </select>
+                </span>
+            </li>
+            <li>
+                <span>수량</span>
+                <span>
+                    <select id="cnt">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </select>
+                </span>
+            </li>
+            <li>
+                <span>
+                    <button id="calcBtn" type="button">금액확인</button>
+                </span>
+                총 상품금액
+                <span id="priceSum">0</span> <!--summation : 합계-->
+                원
+            </li>
+        </ul>
+    </div> <!--div#saleInfo-->
+
+</body></html>
+
+
+
+
+
+
+
+
+
+
+
